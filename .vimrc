@@ -1,6 +1,29 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'itchyny/lightline.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'xuyuanp/nerdtree-git-plugin'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'sirver/ultisnips'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'scrooloose/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'vim-perl/vim-perl'
+Plugin 'honza/vim-snippets'
+Plugin 'anyakichi/vim-surround'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 set noeb vb t_vb=
 set number
-set runtimepath^=~/.vim/bundle/ctrlp.vim
 if has("autocmd")
   " Enable file type detection.
   " Use the default filetype settings, so that mail gets 'tw' set to 72,
@@ -9,7 +32,6 @@ if has("autocmd")
   filetype plugin indent on
   " ...
 endif
-execute pathogen#infect()
 syntax on
 setlocal omnifunc=syntaxcomplete#Complete
 set updatetime=100
@@ -33,6 +55,7 @@ autocmd FileType perl setlocal ts=2 sts=2 sw=2
 autocmd FileType scss setlocal ts=2 sts=2 sw=2
 autocmd FileType css setlocal ts=2 sts=2 sw=2
 autocmd FileType sh setlocal ts=2 sts=2 sw=2
+
 
 set hlsearch
 " Press Space to turn off highlighting and clear any message already displayed.

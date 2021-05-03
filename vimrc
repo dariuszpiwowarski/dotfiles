@@ -18,6 +18,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-perl/vim-perl'
 Plugin 'honza/vim-snippets'
 Plugin 'anyakichi/vim-surround'
+Plugin 'fatih/vim-go'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
